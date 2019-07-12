@@ -6,14 +6,9 @@ package day02;
 import java.util.Scanner;
 
 public class test01_Manage {//管理系统
+	int i;
 	public void autoModify(Student[] student){//自动修改
 		Scanner scanner=new Scanner(System.in);
-		for (int i = 0; i < student.length; i++) {
-			if (student[i]==null) {
-				student[i]=new Student();
-				break;
-			}
-		}
 		for (int i = 0; i < student.length; i++) {
 			System.out.print("请输入学员姓名:");
 			student[i].name=scanner.next();

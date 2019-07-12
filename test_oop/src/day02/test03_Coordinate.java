@@ -18,20 +18,27 @@ import java.util.Scanner;
 3、当坐标墙纸上打印格子时，格子用 ”#” 表示，其余用“-” 表示。
  */
 public class test03_Coordinate {// 坐标墙纸
-	int x;//截取位置的x坐标
-	int y;//截取位置的y坐标
-	int x_length;//墙纸长
-	int y_length;//墙纸宽
+	int x;// 截取位置的x坐标
+	int y;// 截取位置的y坐标
+	int x_length;// 墙纸长
+	int y_length;// 墙纸宽
+
 	public void init(int x_length, int y_length) {// 自定义墙纸大小
-		x=0;
-		y=0;
+		x = 2;
+		y = 1;
 		this.x_length = x_length;
 		this.y_length = y_length;
 	}
 
 	public void display(Square square) {
-		for (int i = y; i < y+y_length; i++) {//宽
-			for (int j = x; j <x+ x_length; j++) {//长
+		for (int i = 0; i < y; i++) {
+			System.out.println();
+		}
+		for (int i = y; i < y + y_length; i++) {// 宽
+			for (int j2 = 0; j2 < x; j2++) {
+				System.out.print(" ");
+			}
+			for (int j = x; j < x + x_length; j++) {// 长
 				if (square.x == j && square.y == i) {
 					System.out.print("#");
 				} else {
@@ -40,6 +47,7 @@ public class test03_Coordinate {// 坐标墙纸
 			}
 			System.out.println();
 		}
+
 	}
 
 	public static void main(String[] args) {
@@ -62,13 +70,13 @@ public class test03_Coordinate {// 坐标墙纸
 		System.out.println("墙纸显示如下:");
 		coordinate.display(square);
 		System.out.println();
-		square.moveLeftOne();//左移一格
+		square.moveLeftOne();// 左移一格
 		coordinate.display(square);
 		System.out.println();
-		square.moveRightOne();//右移一格
+		square.moveRightOne();// 右移一格
 		coordinate.display(square);
 		System.out.println();
-		square.moveDown(-4);//上移4格
+		square.moveDown(-4);// 上移4格
 		coordinate.display(square);
 	}
 }
