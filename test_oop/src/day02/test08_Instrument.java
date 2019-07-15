@@ -1,6 +1,6 @@
 package day02;
 
-import java.sql.Date;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 
 /*
@@ -15,9 +15,11 @@ public class test08_Instrument {
 		return (int)(Math.random()*x+1);
 	}
 	public String getSystemTime(){//获取当前系统时间
+		//1970年零时，到现在的毫秒数
 		Date date=new Date(System.currentTimeMillis());
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");//以某种格式显示
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//以某种格式显示
 		return sdf.format(date);//格式化系统时间
+		//return System.currentTimeMillis()/1000.0/60/60;
 	}
 	public int getSum_1_X(int x){//1到x的整数求和
 		if (x==1) {
@@ -33,6 +35,13 @@ public class test08_Instrument {
 		else
 			return x*factorial(x-1);
 	}
+	public int fun(int n){//斐波拉契数列
+		if (n==1||n==2) {
+			return 1;
+		}else {
+			return fun(n-1)+fun(n-2);
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		test08_Instrument instr=new test08_Instrument();
@@ -40,6 +49,7 @@ public class test08_Instrument {
 		System.out.println("当前系统时间:"+instr.getSystemTime());
 		System.out.println("1-x的整数的和:"+instr.getSum_1_X(5));
 		System.out.println("整数x的阶乘:"+instr.factorial(5));
+		System.out.println(instr.fun(3));
 	}
 
 }
