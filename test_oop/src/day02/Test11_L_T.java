@@ -66,13 +66,18 @@ public class Test11_L_T {
 		}
 	}
 	public static void main(String[] args) {
-		Cell2[] cell2s=new Cell2[4];
+		Cell2[] cell2s = null;
 		Graph_L2 graph_L2=new Graph_L2(5, 5, cell2s);
+		System.out.println(graph_L2.cell2s[0].x);
 		Graph_T2 graph_T2=new Graph_T2(5, 5, cell2s);
 		Test11_L_T wallPaper=new Test11_L_T(1, 1, 10, 10, graph_L2, graph_T2);
 		wallPaper.display_L();
 		System.out.println();
 		wallPaper.display_T();
+		System.out.println();
+		graph_L2.moveLeftOne();
+		System.out.println(graph_L2.x+" "+graph_L2.cell2s[0].x);
+		wallPaper.display_L();
 	}
 }
 class Cell2{
@@ -98,56 +103,72 @@ class Cell2{
 class Graph_L2{//图形L，左下角为中心
 	int x;
 	int y;
-	Cell2[] cell2s;
+	 Cell2[] cell2s;
 	public Graph_L2(int x,int y,Cell2[] cell2s){
 		this.x=x;
 		this.y=y;
 		cell2s=new Cell2[]{
-				new Cell2(x, y),
-				new Cell2(x+1, y),
-				new Cell2(x, y-1),
-				new Cell2(x, y-2)
+				new Cell2(this.x,this. y),
+				new Cell2(this.x+1, this.y),
+				new Cell2(this.x,this. y-1),
+				new Cell2(this.x, this.y-2)
 		};
 		this.cell2s=cell2s;
 	}
 	public void moveLeftOne(){
-		x--;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].x--;
+		}
 	}
 	public void moveRightOne(){
-		x++;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].x++;
+		}
 	}
 	public void moveDownOne(){
-		y++;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].y++;
+		}
 	}
 	public void moveDownN(int n){
-		y+=n;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].y++;
+		}
 	}
 }
 class Graph_T2{//图形T,交叉处为中心
 	int x;
 	int y;
-	Cell2[] cell2s;
+	 Cell2[] cell2s;
 	public Graph_T2(int x,int y,Cell2[] cell2s){
 		this.x=x;
 		this.y=y;
 		cell2s=new Cell2[]{
-				new Cell2(x, y),
-				new Cell2(x-1, y),
-				new Cell2(x+1, y),
-				new Cell2(x, y+1)
+				new Cell2(this.x,this. y),
+				new Cell2(this.x-1, this.y),
+				new Cell2(this.x+1, this.y),
+				new Cell2(this.x, this.y+1)
 		};
 		this.cell2s=cell2s;
 	}
 	public void moveLeftOne(){
-		x--;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].x--;
+		}
 	}
 	public void moveRightOne(){
-		x++;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].x++;
+		}
 	}
 	public void moveDownOne(){
-		y++;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].y++;
+		}
 	}
 	public void moveDownN(int n){
-		y+=n;
+		for (int i = 0; i < cell2s.length; i++) {
+			cell2s[i].y++;
+		}
 	}
 }
