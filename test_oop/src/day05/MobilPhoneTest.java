@@ -1,7 +1,7 @@
 package day05;
 
-public class MobilPhoneTest {
-
+public class MobilPhoneTest{
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MobilPhone mp=new MobilPhone();//实例化MobilPhone类的对象

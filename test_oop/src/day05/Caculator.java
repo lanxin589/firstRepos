@@ -1,5 +1,6 @@
 package day05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Caculator {
@@ -12,19 +13,21 @@ public class Caculator {
 		}else if (yearchoice==3) {
 			return loan*(1+0.0639)/240;
 		}else {
-			System.out.println("选择错误!");
+			System.out.println("閫夋嫨閿欒!");
 			return -1;
 		}
 	}
+	
 	public static void main(String[] args) {
+		
 		Scanner sc=new Scanner(System.in);
-		System.out.print("请输入贷款金额:");
+		System.out.print("璇疯緭鍏ヨ捶娆鹃噾棰�:");
 		double loan=sc.nextDouble();
-		System.out.println("请选择贷款年限: 1.3年(36个月) 2.5年(60个月) 3.20年(240个月)");
+		System.out.println("璇烽�夋嫨璐锋骞撮檺: 1.3骞�(36涓湀) 2.5骞�(60涓湀) 3.20骞�(240涓湀)");
 		int yearchoice=sc.nextInt();
 		Caculator caculator=new Caculator();
 		if (caculator.loan(loan, yearchoice)!=-1) {
-			System.out.println("* * *月供为: "+caculator.loan(loan, yearchoice));
+			System.out.println("* * *鏈堜緵涓�: "+caculator.loan(loan, yearchoice));
 		}
 	}
 	
