@@ -4,21 +4,9 @@ package day07;
         属性—名字 name，年龄age,身高 height，电话tel，科目subject
        方法— getName,getAge,getHeight ,getSubject方法
  */
-public class T3_Teacher {
-	String name;//名字
-	int age;//年龄
-	int height;//身高
-	String tel;//电话
+public class T3_Teacher extends T3_Person{
 	String subject;//科目
-	public String getName() {
-		return name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public int getHeight() {
-		return height;
-	}
+	
 	public String getSubject() {
 		return subject;
 	}
