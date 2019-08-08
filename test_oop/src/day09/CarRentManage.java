@@ -109,7 +109,7 @@ public class CarRentManage {// 汽车租赁管理类
 		double rentmoney = car.calrent(day);
 		if (rentmoney > 0) {
 			System.out.println("租车成功！");
-			System.out.println("分配给您的车牌号是:" + car.carNo);
+			System.out.println("分配给您的车牌号是:" + car.getCarNo());
 			System.out.println("您需要支付的租赁费用是:" + rentmoney + "元");
 		} else {
 			System.out.println("租车失败！");

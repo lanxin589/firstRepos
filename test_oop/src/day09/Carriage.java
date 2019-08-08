@@ -4,6 +4,7 @@ public class Carriage extends Car{//轿车
 	private String type;//型号
 	
 	public Carriage() {
+		
 	}
 	
 	public Carriage(String brand, double rentmoney,String carNo,String type){

@@ -23,7 +23,7 @@ public class CarOperation {//汽车业务类
 					car=carriage;
 					break;
 				}
-				System.out.println("没有找到可匹配的教车！");
+				System.out.println("没有找到可匹配的轿车！");
 			}else if(cars[i] instanceof Coach){
 				Coach coach=(Coach)cars[i];
 				//输入的品牌和座位数是否匹配

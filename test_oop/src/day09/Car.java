@@ -3,7 +3,7 @@ package day09;
 public abstract class Car {//汽车类
 	private String brand;//品牌
 	private double rentmoney;//日租金
-	String carNo;//车牌号
+	private String carNo;//车牌号
 	public Car() {
 		
 	}
