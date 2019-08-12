@@ -14,9 +14,11 @@ public class Test {//测试类
 		handset=new AptitudeHandset();
 		if (handset instanceof AptitudeHandset) {
 			AptitudeHandset aHandset=(AptitudeHandset)handset;
+			aHandset.networkConn();//智能手机上网
 			aHandset.play("----====");//智能手机播放视频
 			aHandset.sendInfo();//智能手机发送信息
 			aHandset.call();//智能手机打电话
+			aHandset.takephotos();//智能手机照相
 		}
 	}
 

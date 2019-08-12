@@ -28,4 +28,10 @@ public class AptitudeHandset extends Handset implements PlayWiring, Network, Tak
 		System.out.println("我用智能手机打电话");
 	}
 
+	@Override
+	public void takephotos() {
+		// TODO Auto-generated method stub
+		System.out.println("....咔嚓....");
+	}
+
 }
