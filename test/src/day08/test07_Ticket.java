@@ -19,11 +19,11 @@ public class test07_Ticket {//门票类
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Visitor visitor = new Visitor();
 		test07_Ticket tT = new test07_Ticket();
 		Scanner sc = new Scanner(System.in);
 		char c;
 		do {
+			Visitor visitor = new Visitor();
 			System.out.print("请输入姓名:");
 			visitor.name = sc.next();
 			System.out.print("请输入年龄:");
@@ -32,7 +32,7 @@ public class test07_Ticket {//门票类
 			if (tT.free(visitor) == 0) {
 				System.out.println("门票免费");
 			} else {
-				System.out.println(tT.free(visitor));
+				System.out.println(tT.free(visitor)+"元");
 			}
 			do{
 				System.out.println("是否继续(y/n)?");
